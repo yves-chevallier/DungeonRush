@@ -1,49 +1,8 @@
 # DungeonRush
 ![](screenshot.gif)
+
 >A game inspired by Snake, in pure C with SDL2.
 >My piece of work from C assignment. Hope you like it :)
-
-*I work on the small project on my own so the code lacks of comments.*
-
-## Download
-
-[Windows(64bit)](https://github.com/Rapiz1/DungeonRush/releases/download/v1.1-beta/DungeonRush-v1.1-beta-Windows-x86_64.zip)
-
-[Windows(32bit)](https://github.com/Rapiz1/DungeonRush/releases/download/v1.1-beta/DungeonRush-v1.1-beta-Windows-i686.zip)
-
-[Linux](https://github.com/Rapiz1/DungeonRush/releases/download/v1.1-beta/DungeonRush-v1.1-beta-linux.zip)
-
-[Someone port it to android!](https://github.com/imrunning/DungeonRush_Android)
-
-AppImage for Linux is also available in release page.
-
-[Archlinux AUR](https://aur.archlinux.org/packages/dungeonrush/)
-
-```yay -S dungeonrush```
-
-[Archlinux AUR(git version)](https://aur.archlinux.org/packages/dungeonrush-git/)
-
-```yay -S dungeonrush-git```
-
-*The game supports macOS but I don't have an Mac to compile for it.*
-
-The executable is called `dungeon_rush`
-
-## Release Note
-
-### v1.1-beta
-- Fix bugs
-
-### v1.0-beta
-- Fix bugs
-- Add Multiplayer / LAN mode
-
-**You can play with your friend via Internet!**
-*You need to be in the same network and can directly connect by IP*
-
-### v1.0-alpha
-
-Initial release
 
 ## How to Play
 
@@ -111,7 +70,7 @@ $ cmake -B build && cmake --build build
 ## Known issues
 [Game speed too fast with some NVIDIA graphic cards on Linux](https://github.com/Rapiz1/DungeonRush/issues/4)
 ## License and Credits
-DungeonRush has mixed meida with 
+DungeonRush has mixed meida with
 various licenses. Unfortunately I failed to track them all. In other word, there are many stuff excluding code that comes with unknown license. You should not reuse any of audio, bitmaps, font in this project. If you insist, use at your own risk.
 ### Code
 GPL

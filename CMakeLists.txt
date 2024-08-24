@@ -3,13 +3,10 @@ project(DungeonRush VERSION 0.1.0
                     DESCRIPTION "A game inspired by snake"
                     LANGUAGES C)
 
-# Add SDL2 CMake modules
-list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake/sdl2)
-
 # Set output path
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
-# Find SDL2
+# Find SDL2 and additional SDL2 libraries
 find_package(SDL2 REQUIRED)
 find_package(SDL2_image REQUIRED)
 find_package(SDL2_net REQUIRED)
@@ -24,7 +21,23 @@ add_executable(${BIN_NAME} ${SRC})
 
 target_include_directories(${BIN_NAME} PUBLIC src)
 target_include_directories(${BIN_NAME} PUBLIC ${SDL2_INCLUDE_DIR})
-target_link_libraries(${BIN_NAME} SDL2::Main SDL2::Net SDL2::Image SDL2::Mixer 
-                      SDL2::TTF m)
+
+# Manually link SDL2 and its additional libraries
+target_link_libraries(${BIN_NAME}
+    ${SDL2_LIBRARY}
+    ${SDL2_IMAGE_LIBRARIES}
+    ${SDL2_NET_LIBRARIES}
+    ${SDL2_MIXER_LIBRARIES}
+    ${SDL2_TTF_LIBRARIES}
+    m)
+
+# If variables like ${SDL2_IMAGE_LIBRARIES} do not exist, replace with SDL2_image, SDL2_mixer, SDL2_net, SDL2_ttf as follows:
+target_link_libraries(${BIN_NAME}
+    SDL2
+    SDL2_image
+    SDL2_net
+    SDL2_mixer
+    SDL2_ttf
+    m)
 
 file(COPY res DESTINATION ${CMAKE_RUNTIME_OUTPUT_DIRECTORY})
