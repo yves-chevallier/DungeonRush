@@ -1,5 +1,5 @@
-#ifndef SNAKE_TYPES_
-#define SNAKE_TYPES_
+#pragma once
+
 #include <SDL.h>
 #include <SDL_mixer.h>
 #include <stdbool.h>
@@ -105,4 +105,3 @@ typedef struct {
   int id, belong;
   Animation* ani;
 } Item;
-#endif

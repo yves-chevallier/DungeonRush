@@ -1,9 +1,10 @@
-#ifndef SNAKE_RENDER_H_
-#define SNAKE_RENDER_H_
-#include <SDL.h>
+#pragma once
+
 #include "types.h"
 #include "player.h"
 #include "sprite.h"
+
+#include <SDL.h>
 
 #define ANIMATION_LINK_LIST_NUM 16
 #define RENDER_LIST_MAP_ID 0
@@ -55,4 +56,3 @@ void renderUi();
 void pushAnimationToRender(int id, Animation* ani);
 void blackout();
 void dim();
-#endif

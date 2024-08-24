@@ -1,5 +1,5 @@
-#ifndef SNAKE_AUDIO_H_
-#define SNAKE_AUDIO_H_
+#pragma once
+
 #include <SDL.h>
 #include <SDL_mixer.h>
 
@@ -10,4 +10,3 @@ void randomBgm();
 void stopBgm();
 void pauseSound();
 void resumeSound();
-#endif

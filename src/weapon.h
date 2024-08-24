@@ -1,5 +1,4 @@
-#ifndef SNAKE_WEAPON_H_
-#define SNAKE_WEAPON_H_
+#pragma once
 
 #include "types.h"
 
@@ -25,24 +24,22 @@
 #define WEAPON_POWERFUL_BOW 18
 
 typedef enum {
-  WEAPON_SWORD_POINT,
-  WEAPON_SWORD_RANGE,
-  WEAPON_GUN_RANGE,
-  WEAPON_GUN_POINT,
-  WEAPON_GUN_POINT_MULTI,
+    WEAPON_SWORD_POINT,
+    WEAPON_SWORD_RANGE,
+    WEAPON_GUN_RANGE,
+    WEAPON_GUN_POINT,
+    WEAPON_GUN_POINT_MULTI,
 } WeaponType;
 typedef struct {
-  double chance;
-  int duration;
+    double chance;
+    int duration;
 } WeaponBuff;
 typedef struct {
-  WeaponType wp;
-  int shootRange, effectRange, damage, gap, bulletSpeed;
-  Animation *birthAni, *deathAni, *flyAni;
-  int birthAudio, deathAudio;
-  WeaponBuff effects[BUFF_END];
+    WeaponType wp;
+    int shootRange, effectRange, damage, gap, bulletSpeed;
+    Animation *birthAni, *deathAni, *flyAni;
+    int birthAudio, deathAudio;
+    WeaponBuff effects[BUFF_END];
 } Weapon;
 
 void initWeapons();
-
-#endif

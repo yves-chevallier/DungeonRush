@@ -1,5 +1,4 @@
-#ifndef SNAKE__NET_H_
-#define SNAKE__NET_H_
+#pragma once
 
 #include <SDL_net.h>
 
@@ -13,14 +12,6 @@ typedef enum {
   HEADER_PLAYERMOVE,
   HEADER_GAMEOVER
 } HeaderType;
-
-// Packet header, 8 bit
-/*
-typedef struct {
-  unsigned version: 2;
-  unsigned type: 6;
-} LanPacketHeader;
-*/
 
 typedef struct {
   unsigned version: 2;
@@ -61,4 +52,3 @@ void joinGame(const char* hostname, Uint16 port);
 void sendPlayerMovePacket(unsigned playerId, unsigned direction);
 void sendGameOverPacket(unsigned playerId);
 unsigned recvLanPacket(LanPacket* dest);
-#endif

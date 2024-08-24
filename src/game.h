@@ -1,5 +1,5 @@
-#ifndef SNAKE_GAME_H_
-#define SNAKE_GAME_H_
+#pragma once
+
 #include "player.h"
 #include "sprite.h"
 #include "types.h"
@@ -52,4 +52,3 @@ void shieldSprite(Sprite* sprite, int duration);
 void appendSpriteToSnake(Snake* snake, int sprite_id, int x, int y,
                          Direction direcion);
 void setLevel(int level);
-#endif

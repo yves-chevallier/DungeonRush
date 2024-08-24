@@ -1,5 +1,4 @@
-#ifndef SNAKE_HELPER_H
-#define SNAKE_HELPER_H
+#pragma once
 
 #include <SDL.h>
 #include <math.h>
@@ -25,5 +24,3 @@ SDL_Rect getMapRect(int x, int y);
 SDL_Rect getSpriteAnimationBox(Sprite* sprite);
 int RectRectCalc(SDL_Rect* a, SDL_Rect* b);
 double distance(Point a, Point b);
-
-#endif
